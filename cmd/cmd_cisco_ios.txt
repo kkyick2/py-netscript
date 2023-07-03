@@ -1,0 +1,26 @@
+show version
+show inventory
+show mac address-table | inc /
+show interface
+show start
+show vlan
+show vtp status
+show spanning-tree
+show spanning-tree summary
+show interface status
+show interface trunk
+show ip interface brief
+show cdp neighbors
+show cdp neighbors detail
+show ip route
+show ip route summary
+show etherchannel summary
+show clock
+show ntp status
+show processes cpu
+show env all
+show switch detail
+show processes cpu sorted
+show processes cpu history
+show log
+show lldp neighbors

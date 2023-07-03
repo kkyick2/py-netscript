@@ -1,0 +1,17 @@
+show version
+show inventory
+show environment power all
+show vlan
+show interfaces
+show interfaces switchport
+show ip int
+show ip int brief
+show ip bgp
+show ip bgp summary
+show ip bgp neighbors
+show ip route
+show standby brief
+show mac address-table
+show ip arp
+show cdp neighbors detail
+show clock
