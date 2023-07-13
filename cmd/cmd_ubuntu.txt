@@ -1,0 +1,6 @@
+date
+cat /etc/os-release
+lsb_release -a
+hostnamectl
+ip addr
+route -n

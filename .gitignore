@@ -1,8 +1,9 @@
 # kkyick2
 *xx*
-cmdoutput*
+cmdoutput
 output
 device_empf_*.csv
+device_*.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

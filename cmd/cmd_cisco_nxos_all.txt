@@ -14,6 +14,7 @@ show cdp neighbors
 show cdp neighbors detail
 show ip route
 show ip route summary
+show ip ospf neighbors vrf IPN
 show etherchannel summary
 show clock
 show ntp status
@@ -24,3 +25,5 @@ show processes cpu sorted
 show processes cpu history
 show log
 show lldp neighbors
+exit
+
