@@ -6,13 +6,15 @@ import sys
 import csv
 import time
 from datetime import datetime
-from netmiko import ConnectHandler
+from netmiko import SSHDetect, ConnectHandler
 from paramiko.ssh_exception import SSHException
 
 #################################################
-# Import Logging
+# code for logging
+#################################################
 import logging
-logger = logging.getLogger("pyshowcmd")
+scriptname = os.path.splitext(os.path.basename(sys.argv[0]))[0]
+logger = logging.getLogger(scriptname)
 logger.setLevel(logging.DEBUG)
 
 DATE = datetime.now().strftime("%Y%m%d")
@@ -44,8 +46,10 @@ stream_handler.setFormatter(formatter)
 logger.addHandler(file_handler_info)
 logger.addHandler(file_handler_debug)
 logger.addHandler(stream_handler)
-#################################################
 
+#################################################
+# code for pyshowcmd
+#################################################
 NEXTLINE = '\n'
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 O_CMD_DIR = 'cmdoutput'
@@ -67,24 +71,24 @@ def mkdir(path):
     return
 
 
-def read_cmd_file(filename):
+def read_cmd_file(fn):
     """
-        read txt return a list
+        read filename txt return a cmd list
     """
-    with open(filename, 'r') as f:
+    with open(fn, 'r') as f:
         return [line.strip() for line in f]
 
 
-def read_device_file(filename):
+def read_device_file(fn):
     """
-        read csv return a list
+        read filename csv return a device list
     """
-    print(f'###### Read csv: {filename}')
-    logger.info(f'###### Read csv: {filename}')
+    print(f'###### Read csv: {fn}')
+    logger.info(f'###### Read csv: {fn}')
 
-    with open(filename, 'r') as csvFile:
+    with open(fn, 'r') as csvf:
         devicelist = []
-        reader = csv.DictReader(csvFile)
+        reader = csv.DictReader(csvf)
         for row in reader:
             device = {
                 'hostname': row['hostname'],
@@ -101,15 +105,15 @@ def read_device_file(filename):
     return devicelist
 
 
-def print_file(msg, outFile):
+def print_file(msg, outf):
     """
         print string to outfile and print string to terminal
     """
-    outFile.write(str(msg) + str(NEXTLINE))
+    outf.write(str(msg) + str(NEXTLINE))
     return
 
 
-def connect_device(device, outFile):
+def connect_device(device, outpath):
     """
         connect device using netmiko
         @param device: device dict in this formet, need pop the cmdfile key for using netmiko
@@ -120,6 +124,7 @@ def connect_device(device, outFile):
             'username': 'col',
             'password': 'col123col',
             'cmdfile': 'cmd_test_1251.txt', <--need pop this item
+        @param outPath: output file full path
         }
     """
     device2 = {
@@ -129,27 +134,42 @@ def connect_device(device, outFile):
         'username': device['username'],
         'password': device['password'],
     }
-    # connect to device using netmiko_connect
+    devicetype = device['device_type']
     print(
         f'###### Connect to {device["ip"]}:{device["port"]} execute: {device["cmdfile"]}')
     logger.info(
         f'###### Connect to {device["ip"]}:{device["port"]} execute: {device["cmdfile"]}')
+
+    # read cmd file
+    cmdlist = read_cmd_file(device['cmdfile'])
+    print(f' Prepare to execute {len(cmdlist)} cmd : {cmdlist}')
+    logger.info(f' Prepare to execute {len(cmdlist)} cmd : {cmdlist}')
+    # connect to device using netmiko_connect
     try:
-        connect = ConnectHandler(**device2)
-        prompt = connect.find_prompt()
-        print(f' Prompt: {prompt}')
-        logger.info(f' Prompt: {prompt}')
+        # Case1: auto detect device type
+        if (devicetype) == 'autodetect':
+            print(f' Device Type: {devicetype}')
+            logger.info(f' Device Type: {devicetype}')
+            guesser = SSHDetect(**device2)
+            best_match = guesser.autodetect()
+            print(best_match)  # Name of the best device_type to use further
+            # Dictionary of the whole matching result
+            print(guesser.potential_matches)
 
-        # read cmd file
-        cmdlist = read_cmd_file(device['cmdfile'])
-        print(f' Execute {len(cmdlist)} cmd : {cmdlist}')
-        logger.info(f' Execute {len(cmdlist)} cmd : {cmdlist}')
+        # Case2: input device type
+        else:
+            connect = ConnectHandler(**device2)
+            prompt = connect.find_prompt()
+            print(f' Device Type: {devicetype} | Prompt: {prompt}')
+            logger.info(f' Device Type: {devicetype} | Prompt: {prompt}')
 
-        # send each cmd to device
-        for cmd in cmdlist:
-            output = connect.send_command(cmd)
-            print_file('###### EXECUTE CMD: ' + cmd, outFile)
-            print_file(output, outFile)
+            # open output file
+            with open(outpath, 'w', encoding='utf-8') as outf:
+                # send each cmd to device
+                for cmd in cmdlist:
+                    output = connect.send_command(cmd)
+                    print_file('###### EXECUTE CMD: ' + cmd, outf)
+                    print_file(output, outf)
 
         print(f' Complete and disconnect')
         logger.info(f' Complete and disconnect')
@@ -159,6 +179,7 @@ def connect_device(device, outFile):
     except Exception as e:
         print(e)
         logger.warning(e)
+
     return
 
 
@@ -167,9 +188,10 @@ def main(devicefile):
         1/ open device csv -> device list
         2/ open cmdoutput text -> connect device
     """
+    # create device object
     devicelist = read_device_file(devicefile)
 
-    # loop each row
+    # loop each row of csv
     DATETIME = datetime.now().strftime("%Y%m%d_%H%M")
     for device in devicelist:
         # create batch folder
@@ -186,8 +208,8 @@ def main(devicefile):
         O_FILEPATH = (os.path.join(O_TYPE_DIR, O_FILENAME))
 
         # start connect to device
-        with open(O_FILEPATH, 'w', encoding='utf-8') as outFile:
-            connect_device(device, outFile)
+        connect_device(device, O_FILEPATH)
+
     return
 
 
