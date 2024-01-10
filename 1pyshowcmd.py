@@ -215,7 +215,7 @@ def main(devicefile):
 
 if __name__ == "__main__":
 
-    # loggin test
+    # loggin test #
     logger.debug("This is Debug message")
     logger.info("This is Info message")
     logger.warning("This is Warning message")
