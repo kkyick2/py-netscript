@@ -1,0 +1,98 @@
+###### EXECUTE CMD: get system status
+Version: FortiProxy-400E v7.0.13,build0183,231013 (GA.M)
+License: Active, seat 4000, active seat 4000, expiry date 2026-08-21
+HA self seat 4000, others seat 4000, inclusion rate 50%
+Virus-DB: 92.00544(2024-01-11 05:26)
+Extended DB: 92.00544(2024-01-11 05:25)
+Extreme DB: 1.00000(2018-04-09 18:07)
+AV AI/ML Model: 2.14201(2024-01-11 04:45)
+IPS-DB: 6.00741(2015-12-01 02:30)
+IPS-ETDB: 21.00352(2022-07-07 00:20)
+APP-DB: 21.00350(2022-07-05 00:19)
+INDUSTRIAL-DB: 6.00741(2015-12-01 02:30)
+IPS Malicious URL Database: 4.00401(2022-07-07 15:26)
+Serial-Number: FPX4HETA21000092
+BIOS version: 00020010
+System Part-Number: P21851-03
+Log hard disk: Available
+Hostname: n1psefpro1201
+Private Encryption: Enable
+Operation Mode: NAT
+FIPS-CC mode: disable
+Current HA mode: a-p, secondary
+Cluster uptime: 822 days, 5 hours, 50 minutes, 14 seconds
+Cluster state change time: 2023-11-25 09:17:07
+Branch point: 0183
+Release Version Information: GA
+FortiProxy x86-64: Yes
+System time: Thu Jan 11 23:35:31 2024
+Last reboot reason: warm reboot
+
+###### EXECUTE CMD: get router info routing-table details
+
+command parse error before 'info'
+Command fail. Return code -61
+
+###### EXECUTE CMD: get system interface
+== [ port1 ]
+name: port1   mode: static    ip: 172.31.211.10 255.255.254.0   status: up    netbios-forward: disable    type: physical   src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    
+== [ port2 ]
+name: port2   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: physical   src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    
+== [ port3 ]
+name: port3   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.210.251.9 255.255.255.248   status: up    netbios-forward: disable    type: physical   src-check: enable    explicit-web-proxy: enable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    
+== [ port4 ]
+name: port4   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: physical   src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    mtu-override: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    
+== [ ssl.root ]
+name: ssl.root   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: tunnel   src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    
+
+###### EXECUTE CMD: get system ha status
+HA Health Status: OK
+Model: FortiProxy-400E
+Mode: HA A-P
+Group: 0
+Debug: 0
+Cluster Uptime: 822 days 5:50:14
+Cluster state change time: 2023-11-25 09:17:07
+Primary selected using:
+    <2023/11/25 09:17:07> FPX4HETA21000098 is selected as the primary because its override priority is larger than peer member FPX4HETA21000092.
+    <2023/11/25 09:14:02> FPX4HETA21000092 is selected as the primary because it's the only member in the cluster.
+    <2023/11/25 09:13:56> FPX4HETA21000092 is selected as the primary because UPGRADE_SECONDARY flag is set on peer member FPX4HETA21000098.
+    <2023/11/25 09:13:50> FPX4HETA21000098 is selected as the primary because UPGRADE_PRIMARY flag is unset on peer member FPX4HETA21000092.
+override: disable
+Configuration Status:
+    FPX4HETA21000092(updated 1 seconds ago): in-sync
+    FPX4HETA21000098(updated 4 seconds ago): in-sync
+System Usage stats:
+    FPX4HETA21000092(updated 1 seconds ago):
+        sessions=60, average-cpu-user/nice/system/idle=0%/0%/0%/100%, memory=21%
+    FPX4HETA21000098(updated 4 seconds ago):
+        sessions=441, average-cpu-user/nice/system/idle=0%/0%/0%/99%, memory=33%
+HBDEV stats:
+    FPX4HETA21000092(updated 1 seconds ago):
+        port2: physical/1000auto, up, rx-bytes/packets=48291880359/61442767, tx=11636401018/49045944
+        port4: physical/1000auto, up, rx-bytes/packets=8013295183/19544624, tx=7984698636/19570338
+    FPX4HETA21000098(updated 4 seconds ago):
+        port2: physical/1000auto, up, rx-bytes/packets=11638073103/49044135, tx=48289995548/61441946
+        port4: physical/1000auto, up, rx-bytes/packets=7984296892/19569354, tx=8013222203/19544446
+MONDEV stats:
+    FPX4HETA21000092(updated 1 seconds ago):
+        port3: physical/1000auto, up, rx-bytes/packets=192930514/2553492, tx=2220930/9516
+    FPX4HETA21000098(updated 4 seconds ago):
+        port3: physical/1000auto, up, rx-bytes/packets=2076617409835/2070061591, tx=2170202073018/2401244207
+Secondary   : n1psefpro1201   , FPX4HETA21000092, HA cluster index = 1
+Primary     : n1psefpro1101   , FPX4HETA21000098, HA cluster index = 0
+number of vcluster: 1
+vcluster 1: standby 169.254.0.33
+Secondary: FPX4HETA21000092, HA operating index = 1
+Primary: FPX4HETA21000098, HA operating index = 0
+
+###### EXECUTE CMD: diagnose vpn ike gateway list
+
+command parse error before 'ike'
+Command fail. Return code -61
+
+###### EXECUTE CMD: diagnose vpn tunnel list
+
+command parse error before 'tunnel'
+Command fail. Return code -61
+

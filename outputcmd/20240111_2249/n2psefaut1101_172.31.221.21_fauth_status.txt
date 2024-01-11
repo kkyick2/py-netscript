@@ -1,0 +1,46 @@
+###### EXECUTE CMD: get system status
+System:
+	Version:              FAC800F v6.3.2-build0687,210705 (GA)
+	Branch point:         0687
+	Serial number:        FAC8HFT921000016
+	System time:          Thu Jan 11 22:50:30 2024 up 484 days,  7:23
+	Disk Usage:           0 GB
+
+RAID Info:
+	RAID level:           Raid-1
+	RAID status:          OK
+	Virtual drive size:   1861 GB
+	Total physical disks: 2
+
+	Physical disk states:
+		Slot:                 0
+		Status:               OK
+		Size:                 1862 GB
+
+		Slot:                 1
+		Status:               OK
+		Size:                 1862 GB
+
+		Slot:                 2
+		Status:               Unavailable
+		Size:                 0 GB
+
+		Slot:                 3
+		Status:               Unavailable
+		Size:                 0 GB
+
+
+HA Status:
+	Enabled:              Yes
+	Node Type:            Load Balancer
+	Primary's IP:            172.31.211.21
+###### EXECUTE CMD: get router info routing-table details
+No such command.
+###### EXECUTE CMD: get system interface
+No such command.
+###### EXECUTE CMD: get system ha status
+No such command.
+###### EXECUTE CMD: diagnose vpn ike gateway list
+No such command.
+###### EXECUTE CMD: diagnose vpn tunnel list
+No such command.

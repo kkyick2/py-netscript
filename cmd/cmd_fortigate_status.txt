@@ -1,0 +1,6 @@
+get system status
+get router info routing-table details
+get system interface
+get system ha status
+diagnose vpn ike gateway list
+diagnose vpn tunnel list 

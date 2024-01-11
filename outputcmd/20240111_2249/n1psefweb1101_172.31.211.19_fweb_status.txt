@@ -1,0 +1,373 @@
+###### EXECUTE CMD: get system status
+International Version: FortiWeb-4000E 7.07,build0151(GA),230519
+Serial-Number: FV-4KETE21000013
+Bios version: 00010003
+Log hard disk: Available
+Hostname: n1psefweb1101
+Operation Mode: Reverse Proxy
+FIPS-CC mode: disabled
+Current HA mode: active-passive, primary
+HA member:
+  Serial-Number     Priority  HA-Role
+  FV-4KETE21000013   1         primary
+  FV-4KETE20000027   5         secondary
+Database Status: Available
+
+###### EXECUTE CMD: get router info routing-table details
+Parsing error at 'info'. err=1
+Command fail. CLI parsing error.
+
+###### EXECUTE CMD: get system interface
+== [ mgmt1 ]
+	type: physical
+	ip: 172.31.211.19/23
+	ip6: ::/0
+	allowaccess: ping ssh snmp http https 
+	status: up
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ mgmt2 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port1 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: up
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port2 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: up
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port3 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port4 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port5 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port6 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port7 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port8 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port9 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port10 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port11 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port12 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port13 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port14 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: down
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port15 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: up
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ port16 ]
+	type: physical
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: up
+	mode: static
+	ip6-mode: static
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ DMZ-FORTIWEB ]
+	type: redundant
+	ip: 0.0.0.0/0
+	ip6: ::/0
+	allowaccess: 
+	status: up
+	mode: static
+	ip6-mode: static
+	intf: port1 port2 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ UTM-WAF.754 ]
+	type: vlan
+	ip: 10.210.251.25/29
+	ip6: ::/0
+	allowaccess: ping 
+	status: up
+	mode: static
+	ip6-mode: static
+	vlanid: 754
+	interface: DMZ-FORTIWEB
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+== [ WAF-vEdg.810 ]
+	type: vlan
+	ip: 10.210.101.78/29
+	ip6: ::/0
+	allowaccess: ping 
+	status: up
+	mode: static
+	ip6-mode: static
+	vlanid: 810
+	interface: DMZ-FORTIWEB
+	description: 
+	ip6-allowaccess: 
+	wccp: disable
+	mtu: 1500
+	dynamic_gateway: 
+	dynamic_dns1: 
+	dynamic_dns2: 
+
+
+###### EXECUTE CMD: get system ha status
+Parsing error at 'status'. err=1
+Command fail. CLI parsing error.
+
+###### EXECUTE CMD: diagnose vpn ike gateway list
+Parsing error at 'vpn'. err=1
+Command fail. CLI parsing error.
+
+###### EXECUTE CMD: diagnose vpn tunnel list
+Parsing error at 'vpn'. err=1
+Command fail. CLI parsing error.
+

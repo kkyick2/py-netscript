@@ -1,0 +1,312 @@
+###### EXECUTE CMD: get system status
+Version: FortiGate-2201E v7.2.6,build1575,230926 (GA.F)
+Security Level: 1
+Firmware Signature: certified
+Virus-DB: 92.00544(2024-01-11 05:26)
+Extended DB: 92.00544(2024-01-11 05:25)
+Extreme DB: 1.00000(2018-04-09 18:07)
+AV AI/ML Model: 2.14201(2024-01-11 04:45)
+IPS-DB: 6.00741(2015-12-01 02:30)
+IPS-ETDB: 26.00712(2024-01-10 00:52)
+APP-DB: 6.00741(2015-12-01 02:30)
+FMWP-DB: 23.00110(2023-11-18 18:04)
+INDUSTRIAL-DB: 6.00741(2015-12-01 02:30)
+IPS Malicious URL Database: 4.00935(2024-01-10 06:46)
+IoT-Detect: 0.00000(2022-08-17 17:31)
+Serial-Number: FG22E1T920900982
+BIOS version: 05000003
+System Part-Number: P23514-20
+Log hard disk: Available
+Hostname: p2psefutm1501
+Private Encryption: Disable
+Operation Mode: NAT
+Current virtual domain: root
+Max number of virtual domains: 10
+Virtual domains status: 1 in NAT mode, 0 in TP mode
+Virtual domain configuration: disable
+FIPS-CC mode: disable
+Current HA mode: a-p, primary
+Cluster uptime: 582 days, 13 hours, 13 minutes, 21 seconds
+Cluster state change time: 2024-01-11 20:53:17
+Branch point: 1575
+Release Version Information: GA
+FortiOS x86-64: Yes
+System time: Thu Jan 11 23:34:56 2024
+Last reboot reason: warm reboot
+
+###### EXECUTE CMD: get router info routing-table details
+Codes: K - kernel, C - connected, S - static, R - RIP, B - BGP
+       O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       V - BGP VPNv4
+       * - candidate default
+
+Routing table for VRF=0
+S*      0.0.0.0/0 [10/0] via 10.120.254.6, IBS.911, [1/0]
+                  [10/0] via 59.153.196.1, INT-HKBN.901, [11/0]
+S       10.0.0.0/8 [10/0] via 10.120.0.9, UTM-vInt.602, [1/0]
+                   [10/0] via 10.120.0.17, UTM-vOCC.603, [21/0]
+                   [10/0] via 10.120.0.25, UTM-vEdg.604, [21/0]
+                   [10/0] via 10.120.0.33, UTM-vPCCW.605, [21/0]
+                   [10/0] via 10.120.0.81, UTM-vGCIS.611, [21/0]
+                   [10/0] via 10.120.0.89, UTM-vCallc.612, [21/0]
+                   [10/0] via 10.120.0.97, UTM-vAdmc.613, [21/0]
+                   [10/0] via 10.120.0.105, UTM-vSvcc.614, [21/0]
+                   [10/0] via 10.120.0.113, UTM-vB2bn.615, [21/0]
+                   [10/0] via 10.120.0.121, UTM-vEmpfn.616, [21/0]
+                   [10/0] via 10.120.0.129, UTM-v3par.617, [21/0]
+S       10.25.0.0/17 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.25.128.0/17 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.26.0.0/16 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.27.0.0/16 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.28.0.0/16 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.29.0.0/16 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.30.0.0/16 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.32.0.0/16 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.34.0.0/16 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.52.0.0/16 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.111.0.50/32 [10/0] via 10.120.0.25, UTM-vEdg.604, [1/0]
+C       10.120.0.8/29 is directly connected, UTM-vInt.602
+C       10.120.0.16/29 is directly connected, UTM-vOCC.603
+C       10.120.0.24/29 is directly connected, UTM-vEdg.604
+C       10.120.0.32/29 is directly connected, UTM-vPCCW.605
+C       10.120.0.80/29 is directly connected, UTM-vGCIS.611
+C       10.120.0.88/29 is directly connected, UTM-vCallc.612
+C       10.120.0.96/29 is directly connected, UTM-vAdmc.613
+C       10.120.0.104/29 is directly connected, UTM-vSvcc.614
+C       10.120.0.112/29 is directly connected, UTM-vB2bn.615
+C       10.120.0.120/29 is directly connected, UTM-vEmpfn.616
+C       10.120.0.128/29 is directly connected, UTM-v3par.617
+S       10.120.160.0/22 [10/0] via 10.120.251.17, UTM-VPN.753, [1/0]
+S       10.120.164.0/22 [10/0] via 10.120.251.17, UTM-VPN.753, [1/0]
+S       10.120.249.0/24 [10/0] via 10.120.251.25, UTM-WAF.754, [1/0]
+C       10.120.250.0/28 is directly connected, UTM-GSLB.800
+C       10.120.251.0/29 is directly connected, UTM-MAIL.751
+C       10.120.251.8/29 is directly connected, UTM-PROXY.752
+C       10.120.251.16/29 is directly connected, UTM-VPN.753
+C       10.120.251.24/29 is directly connected, UTM-WAF.754
+C       10.120.251.32/29 is directly connected, UTM-SANDBOX.755
+C       10.120.251.40/29 is directly connected, UTM-ANALYZE.756
+C       10.120.251.48/29 is directly connected, UTM-SANDBOX.757
+C       10.120.251.240/29 is directly connected, UTM-ALLOT.781
+C       10.120.254.0/29 is directly connected, IBS.911
+C       10.120.254.240/29 is directly connected, P2-WAN-UTM.702
+S       10.121.0.50/32 [10/0] via 10.120.0.25, UTM-vEdg.604, [1/0]
+S       10.144.192.0/24 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.145.192.0/24 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.210.0.0/16 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       10.220.0.0/16 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+C       59.153.196.0/27 is directly connected, INT-HKBN.901
+S       172.16.0.0/12 [10/0] via 10.120.0.9, UTM-vInt.602, [1/0]
+                      [10/0] via 10.120.0.17, UTM-vOCC.603, [1/0]
+                      [10/0] via 10.120.0.25, UTM-vEdg.604, [1/0]
+                      [10/0] via 10.120.0.33, UTM-vPCCW.605, [1/0]
+                      [10/0] via 10.120.0.81, UTM-vGCIS.611, [1/0]
+                      [10/0] via 10.120.0.89, UTM-vCallc.612, [1/0]
+                      [10/0] via 10.120.0.97, UTM-vAdmc.613, [1/0]
+                      [10/0] via 10.120.0.105, UTM-vSvcc.614, [1/0]
+                      [10/0] via 10.120.0.113, UTM-vB2bn.615, [1/0]
+                      [10/0] via 10.120.0.121, UTM-vEmpfn.616, [1/0]
+                      [10/0] via 10.120.0.129, UTM-v3par.617, [1/0]
+S       172.17.228.0/24 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       172.28.38.0/24 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       172.28.88.0/24 [10/0] via 10.120.254.246, P2-WAN-UTM.702, [1/0]
+S       172.31.120.0/23 [10/0] via 10.120.0.25, UTM-vEdg.604, [1/0]
+S       192.168.0.0/16 [10/0] via 10.120.0.9, UTM-vInt.602, [1/0]
+                       [10/0] via 10.120.0.17, UTM-vOCC.603, [1/0]
+                       [10/0] via 10.120.0.25, UTM-vEdg.604, [1/0]
+                       [10/0] via 10.120.0.33, UTM-vPCCW.605, [1/0]
+                       [10/0] via 10.120.0.81, UTM-vGCIS.611, [1/0]
+                       [10/0] via 10.120.0.89, UTM-vCallc.612, [1/0]
+                       [10/0] via 10.120.0.97, UTM-vAdmc.613, [1/0]
+                       [10/0] via 10.120.0.105, UTM-vSvcc.614, [1/0]
+                       [10/0] via 10.120.0.113, UTM-vB2bn.615, [1/0]
+                       [10/0] via 10.120.0.121, UTM-vEmpfn.616, [1/0]
+                       [10/0] via 10.120.0.129, UTM-v3par.617, [1/0]
+C       202.128.245.1/32 is directly connected, IBS.911
+
+###### EXECUTE CMD: get system interface
+== [ mgmt1 ]
+name: mgmt1   ip: 172.31.121.1 255.255.254.0   status: up    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ mgmt2 ]
+name: mgmt2   management-ip: 0.0.0.0 0.0.0.0   ip: 192.168.2.99 255.255.255.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port1 ]
+name: port1   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port2 ]
+name: port2   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port3 ]
+name: port3   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port4 ]
+name: port4   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port5 ]
+name: port5   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port6 ]
+name: port6   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port7 ]
+name: port7   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port8 ]
+name: port8   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port9 ]
+name: port9   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port10 ]
+name: port10   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port11 ]
+name: port11   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port12 ]
+name: port12   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port13 ]
+name: port13   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port14 ]
+name: port14   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port15 ]
+name: port15   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port16 ]
+name: port16   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port17 ]
+name: port17   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port18 ]
+name: port18   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port19 ]
+name: port19   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port20 ]
+name: port20   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port21 ]
+name: port21   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port22 ]
+name: port22   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port23 ]
+name: port23   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port24 ]
+name: port24   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port25 ]
+name: port25   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port26 ]
+name: port26   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port27 ]
+name: port27   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port28 ]
+name: port28   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port29 ]
+name: port29   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port30 ]
+name: port30   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ ha1 ]
+name: ha1   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ ha2 ]
+name: ha2   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port31 ]
+name: port31   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port32 ]
+name: port32   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port33 ]
+name: port33   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ port34 ]
+name: port34   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ modem ]
+name: modem   mode: pppoe    management-ip: 0.0.0.0 0.0.0.0   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: physical   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ naf.root ]
+name: naf.root   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: tunnel   netflow-sampler: disable    sflow-sampler: disable    src-check: disable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    
+== [ l2t.root ]
+name: l2t.root   ip: 0.0.0.0 0.0.0.0   status: down    netbios-forward: disable    type: tunnel   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    
+== [ ssl.root ]
+name: ssl.root   ip: 0.0.0.0 0.0.0.0   status: up    netbios-forward: disable    type: tunnel   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    
+== [ fortilink ]
+name: fortilink   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 169.254.1.1 255.255.255.0   status: down    netbios-forward: disable    type: aggregate   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ P2-WAN-UTM.702 ]
+name: P2-WAN-UTM.702   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.254.241 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-vEdg.604 ]
+name: UTM-vEdg.604   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.0.30 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-MAIL.751 ]
+name: UTM-MAIL.751   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.251.6 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-PROXY.752 ]
+name: UTM-PROXY.752   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.251.14 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-VPN.753 ]
+name: UTM-VPN.753   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.251.22 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-WAF.754 ]
+name: UTM-WAF.754   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.251.30 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-SANDBOX.755 ]
+name: UTM-SANDBOX.755   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.251.38 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-ANALYZE.756 ]
+name: UTM-ANALYZE.756   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.251.46 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-GSLB.800 ]
+name: UTM-GSLB.800   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.250.14 255.255.255.240   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-vOCC.603 ]
+name: UTM-vOCC.603   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.0.22 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ INT-HKBN.901 ]
+name: INT-HKBN.901   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 59.153.196.16 255.255.255.224   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-SANDBOX.757 ]
+name: UTM-SANDBOX.757   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.251.54 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-vInt.602 ]
+name: UTM-vInt.602   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.0.14 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-vPCCW.605 ]
+name: UTM-vPCCW.605   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.0.38 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-vGCIS.611 ]
+name: UTM-vGCIS.611   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.0.86 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-vCallc.612 ]
+name: UTM-vCallc.612   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.0.94 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-vAdmc.613 ]
+name: UTM-vAdmc.613   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.0.102 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-vSvcc.614 ]
+name: UTM-vSvcc.614   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.0.110 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-vB2bn.615 ]
+name: UTM-vB2bn.615   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.0.118 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-vEmpfn.616 ]
+name: UTM-vEmpfn.616   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.0.126 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-v3par.617 ]
+name: UTM-v3par.617   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.0.134 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ UTM-ALLOT.781 ]
+name: UTM-ALLOT.781   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.251.246 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+== [ IBS.911 ]
+name: IBS.911   mode: static    management-ip: 0.0.0.0 0.0.0.0   ip: 10.120.254.1 255.255.255.248   status: up    netbios-forward: disable    type: vlan   netflow-sampler: disable    sflow-sampler: disable    src-check: enable    explicit-web-proxy: disable    explicit-ftp-proxy: disable    proxy-captive-portal: disable    switch-controller-feature: none    wccp: disable    drop-overlapped-fragment: disable    drop-fragment: disable    mtu-override: disable    
+
+###### EXECUTE CMD: get system ha status
+HA Health Status: OK
+Model: FortiGate-2201E
+Mode: HA A-P
+Group Name: p2psefutm
+Group ID: 13
+Debug: 0
+Cluster Uptime: 582 days 13:13:21
+Cluster state change time: 2024-01-11 20:53:17
+Primary selected using:
+    <2024/01/11 20:53:17> vcluster-1: FG22E1T920900982 is selected as the primary because its override priority is larger than peer member FG22E1T920900989.
+ses_pickup: disable
+override: disable
+Configuration Status:
+    FG22E1T920900982(updated 3 seconds ago): in-sync
+    FG22E1T920900982 chksum dump: 8c db ed 69 3f 16 58 8a e2 c0 a3 aa 63 6a 47 f6 
+    FG22E1T920900989(updated 2 seconds ago): in-sync
+    FG22E1T920900989 chksum dump: 8c db ed 69 3f 16 58 8a e2 c0 a3 aa 63 6a 47 f6 
+System Usage stats:
+    FG22E1T920900982(updated 3 seconds ago):
+        sessions=853, average-cpu-user/nice/system/idle=0%/0%/0%/99%, memory=21%
+    FG22E1T920900989(updated 2 seconds ago):
+        sessions=0, average-cpu-user/nice/system/idle=0%/0%/0%/99%, memory=20%
+HBDEV stats:
+    FG22E1T920900982(updated 3 seconds ago):
+        ha1: physical/10000full, up, rx-bytes/packets/dropped/errors=30190311/66213/0/0, tx=197440747/178074/0/0
+        ha2: physical/10000full, up, rx-bytes/packets/dropped/errors=26460823/48640/0/0, tx=27207303/48498/0/0
+    FG22E1T920900989(updated 2 seconds ago):
+        ha1: physical/10000full, up, rx-bytes/packets/dropped/errors=197634444/178612/0/0, tx=30305883/66584/0/0
+        ha2: physical/10000full, up, rx-bytes/packets/dropped/errors=27365634/48780/0/0, tx=26553931/48811/0/0
+MONDEV stats:
+    FG22E1T920900982(updated 3 seconds ago):
+        port17: physical/10000full, up, rx-bytes/packets/dropped/errors=18657957966/20468967/0/0, tx=20050937865/21078756/0/0
+        port30: physical/10000full, up, rx-bytes/packets/dropped/errors=1569656223/1290945/0/0, tx=66166110/513146/0/0
+    FG22E1T920900989(updated 2 seconds ago):
+        port17: physical/10000full, up, rx-bytes/packets/dropped/errors=1511613552/1290399/0/0, tx=1555155271/1201250/0/0
+        port30: physical/10000full, up, rx-bytes/packets/dropped/errors=1087371998/926658/0/0, tx=2217352/18084/0/0
+Primary     : p2psefutm1501   , FG22E1T920900982, HA cluster index = 1
+Secondary   : p2psefutm1601   , FG22E1T920900989, HA cluster index = 0
+number of vcluster: 1
+vcluster 1: work 169.254.0.2
+Primary: FG22E1T920900982, HA operating index = 0
+Secondary: FG22E1T920900989, HA operating index = 1
+
+###### EXECUTE CMD: diagnose vpn ike gateway list
+
+###### EXECUTE CMD: diagnose vpn tunnel list
+list all ipsec tunnel in vd 0
+
