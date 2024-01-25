@@ -1,0 +1,78 @@
+###### EXECUTE CMD: date
+[?2004l
+Fri Jan 26 12:31:31 AM HKT 2024
+###### EXECUTE CMD: cat /etc/os-release
+[?2004l
+PRETTY_NAME="Ubuntu 22.04.1 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.1 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+###### EXECUTE CMD: lsb_release -a
+[?2004l
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 22.04.1 LTS
+Release:	22.04
+Codename:	jammy
+###### EXECUTE CMD: hostnamectl
+[?2004l
+ Static hostname: ub22201
+       Icon name: computer-vm
+         Chassis: vm
+      Machine ID: a9ce50de5a3f4636a758df48c98e93f6
+         Boot ID: 5d5e2a057b7642bca79c7d72bb67fe7e
+  Virtualization: vmware
+Operating System: ]8;;https://www.ubuntu.com/Ubuntu 22.04.1 LTS]8;;              
+          Kernel: Linux 5.15.0-89-generic
+    Architecture: x86-64
+ Hardware Vendor: VMware, Inc.
+  Hardware Model: VMware Virtual Platform
+###### EXECUTE CMD: ip addr
+[?2004l
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: ens160: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:0c:29:1a:94:8a brd ff:ff:ff:ff:ff:ff
+    altname enp3s0
+    inet 172.16.22.201/24 brd 172.16.22.255 scope global ens160
+       valid_lft forever preferred_lft forever
+    inet6 fe80::20c:29ff:fe1a:948a/64 scope link 
+       valid_lft forever preferred_lft forever
+3: br-1daebbdb243b: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:6c:61:bd:c4 brd ff:ff:ff:ff:ff:ff
+    inet 172.29.0.1/16 brd 172.29.255.255 scope global br-1daebbdb243b
+       valid_lft forever preferred_lft forever
+4: br-28b1d21d641b: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:2a:32:3b:a4 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.112.1/20 brd 192.168.127.255 scope global br-28b1d21d641b
+       valid_lft forever preferred_lft forever
+5: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:52:53:52:51 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+6: br-9ccd8d80e1f9: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:bc:6a:29:d6 brd ff:ff:ff:ff:ff:ff
+    inet 172.24.0.1/16 brd 172.24.255.255 scope global br-9ccd8d80e1f9
+       valid_lft forever preferred_lft forever
+###### EXECUTE CMD: route -n
+[?2004l
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+0.0.0.0         172.16.22.254   0.0.0.0         UG    0      0        0 ens160
+172.16.22.0     0.0.0.0         255.255.255.0   U     0      0        0 ens160
+172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
+172.24.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-9ccd8d80e1f9
+172.29.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-1daebbdb243b
+192.168.112.0   0.0.0.0         255.255.240.0   U     0      0        0 br-28b1d21d641b

@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # by kkyick2
 # import pkg
-import argparse
 import sys
 import os
 import csv
@@ -11,7 +10,7 @@ from netmiko import SSHDetect, ConnectHandler
 from netmiko import NetmikoAuthenticationException
 from paramiko.ssh_exception import SSHException
 import logging
-version = '20240125'
+version = '20240112'
 #################################################
 # global var
 #################################################
@@ -50,7 +49,13 @@ logger.addHandler(stream_handler)
 # code for pyshowcmd
 #################################################
 NEXTLINE = '\n'
+O_CMD_DIR = 'outputcmd1'
+O_XLS_DIR = 'output'
 PRJ_ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
+# OUT_ROOT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), O_CMD_DIR)
+OUT_ROOT_PATH = os.path.join(
+    "C:\/Users\/jackyyick\/projects_local\/python", O_CMD_DIR)
+
 
 INVENTORY_COUNT = 0
 COMPLETE_COUNT = 0
@@ -230,13 +235,11 @@ def connect_device(device, outpath):
     return
 
 
-def process_input(devicefile, outpath):
+def process_input(devicefile):
     """
         1/ open device csv -> device list
         2/ open cmdoutput text -> connect device
     """
-    OUT_ROOT_PATH = outpath
-
     # create device object
     devicelist = read_device_file(devicefile)
 
@@ -272,7 +275,6 @@ def process_input(devicefile, outpath):
 
 if __name__ == "__main__":
 
-    '''
     if len(sys.argv) != 2:
         print("Fail to execute, Usage: python 1pyshowcmd.py <device_list.csv>")
         logger.info(
@@ -280,21 +282,6 @@ if __name__ == "__main__":
         sys.exit(1)
     devicefile = sys.argv[1]
     # devicefile = 'device_lhk2.csv'
-    '''
-    O_CMD_DIR = 'outputcmd'
-    O_XLS_DIR = 'outputxls'
-
-    parser = argparse.ArgumentParser()
-    parser.add_argument("devicefile", help="device_list.csv")
-    parser.add_argument("-o", "--outpath", help="output path of the show cmd result",
-                        default=os.path.dirname(os.path.abspath(__file__)))
-    args = parser.parse_args()
-
-    devicefile = args.devicefile
-    outpath = os.path.join(args.outpath, O_CMD_DIR)
-
-    print(devicefile)
-    print(outpath)
 
     print(f'###')
     print(f'###')
@@ -303,15 +290,13 @@ if __name__ == "__main__":
     print(f'############################################################## ')
     print(f'##################       START SCRIPT       ################## ')
     print(f'### Input device inventory: {devicefile}')
-    print(f'### Output path: {outpath}')
     logger.info(
         f'############################################################## ')
     logger.info(
         f'##################       START SCRIPT       ################## ')
     logger.info(f'### Input device inventory: {devicefile}')
-    logger.info(f'### Output path: {outpath}')
 
-    process_input(devicefile, outpath)
+    process_input(devicefile)
 
     print(
         f' ### Summary: Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT} in file {devicefile}')
