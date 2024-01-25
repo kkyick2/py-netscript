@@ -272,15 +272,6 @@ def process_input(devicefile, outpath):
 
 if __name__ == "__main__":
 
-    '''
-    if len(sys.argv) != 2:
-        print("Fail to execute, Usage: python 1pyshowcmd.py <device_list.csv>")
-        logger.info(
-            f'Fail to execute, Usage: python 1pyshowcmd.py <device_list.csv>')
-        sys.exit(1)
-    devicefile = sys.argv[1]
-    # devicefile = 'device_lhk2.csv'
-    '''
     O_CMD_DIR = 'outputcmd'
     O_XLS_DIR = 'outputxls'
 
@@ -289,12 +280,8 @@ if __name__ == "__main__":
     parser.add_argument("-o", "--outpath", help="output path of the show cmd result",
                         default=os.path.dirname(os.path.abspath(__file__)))
     args = parser.parse_args()
-
     devicefile = args.devicefile
     outpath = os.path.join(args.outpath, O_CMD_DIR)
-
-    print(devicefile)
-    print(outpath)
 
     print(f'###')
     print(f'###')
@@ -314,9 +301,9 @@ if __name__ == "__main__":
     process_input(devicefile, outpath)
 
     print(
-        f' ### Summary: Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT} in file {devicefile}')
+        f'### Summary: Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT} in file {devicefile}')
     logger.info(
-        f' ### Summary: Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT} in file {devicefile}')
+        f'### Summary: Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT} in file {devicefile}')
 
     print(f'###############       END SCRIPT       ############### ')
     print(f'###################################################### ')
