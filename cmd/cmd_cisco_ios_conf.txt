@@ -1,4 +1,2 @@
-ter len 0
-show version
 show run view full
-exit
+show clock

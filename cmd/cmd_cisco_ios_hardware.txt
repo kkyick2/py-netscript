@@ -1,0 +1,17 @@
+show inventory
+show switch detail 
+
+show interfaces description
+show interfaces status
+show ip interface brief
+show interfaces trunk
+show etherchannel summary
+show spanning-tree bridge
+show ip route summary
+
+show cdp neighbors
+show lldp neighbors
+
+show environment power
+show environment fan
+show clock

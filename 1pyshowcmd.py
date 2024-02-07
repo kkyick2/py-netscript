@@ -11,7 +11,7 @@ from netmiko import SSHDetect, ConnectHandler
 from netmiko import NetmikoAuthenticationException
 from paramiko.ssh_exception import SSHException
 import logging
-version = '20240125'
+version = '20240207'
 #################################################
 # global var
 #################################################
@@ -31,7 +31,7 @@ logger = logging.getLogger(SCRIPT_NAME)
 logger.setLevel(LOG_LOWEST_LEVEL)
 # Create Handlers(Filehandler with filename| StramHandler with stdout)
 file_handler = logging.FileHandler(os.path.join(
-    SCRIPT_DIR, 'pyshowcmd_' + DATE + '.log'))
+    SCRIPT_DIR, 'log', 'pyshowcmd_' + DATE + '.log'))
 stream_handler = logging.StreamHandler(sys.stdout)
 # Set Additional log level in Handlers if needed
 file_handler.setLevel(LOG_FILE_LEVEL)
@@ -39,7 +39,7 @@ stream_handler.setLevel(LOG_CONSOLE_LEVEL)
 # Create Formatter and Associate with Handlers
 tz = time.strftime('%z')
 formatter = logging.Formatter(
-    '%(asctime)s ' + tz + ': %(name)s: %(process)d.%(thread)d: %(funcName)s: %(levelname)s: %(message)s')
+    '%(asctime)s ' + tz + ': %(name)s: %(process)d.%(thread)d: %(funcName)-18s: %(levelname)-8s: %(message)s')
 file_handler.setFormatter(formatter)
 stream_handler.setFormatter(formatter)
 # Add Handlers to logger
@@ -187,9 +187,10 @@ def connect_device(device, outpath):
             with open(outpath, 'w', encoding='utf-8') as outf:
                 # send each cmd to device
                 for cmd in cmdlist:
-                    output = connect.send_command(cmd)
-                    print_file('###### EXECUTE CMD: ' + cmd, outf)
-                    print_file(output, outf)
+                    if cmd:
+                        output = connect.send_command(cmd)
+                        print_file('###### EXECUTE CMD: ' + cmd, outf)
+                        print_file(output, outf)
 
         print(f' Complete and disconnect')
         logger.info(f' Complete and disconnect')
@@ -275,6 +276,7 @@ if __name__ == "__main__":
     O_CMD_DIR = 'outputcmd'
     O_XLS_DIR = 'outputxls'
 
+    # example: python 1pyshowcmd.py device_empf_iosnxos_hw_n.csv -o C:\Users\jackyyick\projects_local\python
     parser = argparse.ArgumentParser()
     parser.add_argument("devicefile", help="device_list.csv")
     parser.add_argument("-o", "--outpath", help="output path of the show cmd result",

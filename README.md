@@ -19,7 +19,7 @@ method1: Usage: python 1pyshowcmd.py <device_list.csv>
 ```sh
 cd C:\Users\jackyyick\projects_local\python\py-netscript>
 venv\Scripts\activate
-python 1pyshowcmd.py <device_list.csv>
+python 1pyshowcmd.py device_empf_iosnxos_hw_n.csv -o C:\Users\jackyyick\projects_local\python
 ```
 
 method2: window start.bat for multi start of 1pyshowcmd.py
@@ -60,9 +60,9 @@ paramiko client https://github.com/paramiko/paramiko/blob/main/paramiko/client.p
 | :------- | :-------- | :---------------------- |
 | 20230713 | 2023-0713 | draft                   |
 | 20240112 | 2024-0112 | update for batch backup |
-| 20240125 | 2024-0125 | input using argparse    |
+| 20240207 | 2024-0207 | input using argparse    |
 
-###
+## To Do
 
 ```bash
 login as: fwreadonly
