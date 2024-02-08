@@ -274,16 +274,19 @@ def process_input(devicefile, outpath):
 if __name__ == "__main__":
 
     O_CMD_DIR = 'outputcmd'
-    O_XLS_DIR = 'outputxls'
 
-    # example: python 1pyshowcmd.py device_empf_iosnxos_hw_n.csv -o C:\Users\jackyyick\projects_local\python
+    # example1: python 1pyshowcmd.py device_lhk2.csv
+    #   output folder default: C:\Users\jackyyick\projects_local\python\py-netscript\outputcmd>
+
+    # example2: python 1pyshowcmd.py device_empf_iosnxos_hw_n.csv -o C:\Users\jackyyick\projects_local\python\<xxx>
+    #   output folder : C:\Users\jackyyick\projects_local\python\<xxx>
     parser = argparse.ArgumentParser()
     parser.add_argument("devicefile", help="device_list.csv")
     parser.add_argument("-o", "--outpath", help="output path of the show cmd result",
-                        default=os.path.dirname(os.path.abspath(__file__)))
+                        default=os.path.join(os.path.dirname(os.path.abspath(__file__)), O_CMD_DIR))
     args = parser.parse_args()
     devicefile = args.devicefile
-    outpath = os.path.join(args.outpath, O_CMD_DIR)
+    outpath = os.path.join(args.outpath)
 
     print(f'###')
     print(f'###')
