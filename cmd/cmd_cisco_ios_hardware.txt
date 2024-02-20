@@ -9,9 +9,8 @@ show etherchannel summary
 show spanning-tree bridge
 show ip route summary
 
-show cdp neighbors
+show cdp neighbors | in Total
+show cdp neighbors detail | in Device|Platform|Interface
 show lldp neighbors
 
-show environment power
-show environment fan
-show clock
+show environment stack | in OK

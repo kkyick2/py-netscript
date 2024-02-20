@@ -13,4 +13,3 @@ show lldp neighbors
 
 show environment power
 show environment fan
-show clock

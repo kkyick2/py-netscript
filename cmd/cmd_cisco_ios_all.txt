@@ -1,28 +1,33 @@
-show version
 show run view full
+show version
 show inventory
-show switch detail
+show interface description
 show interface status
 show interface trunk
 show interface
 show vtp status
 show vlan
-show spanning-tree
 show spanning-tree summary
+show spanning-tree bridge
+show spanning-tree
 show ip interface brief
-show ip route
 show ip route summary
+show ip route
+show ip ospf interface
+show ip ospf neighbor 
+show ip pim interface
+show ip pim neighbor
 show ip arp
 show mac address-table | inc /
 show etherchannel summary
 show clock
 show ntp status
-show processes cpu
-show processes cpu sorted
-show processes cpu history
 show cdp neighbors
 show cdp neighbors detail
 show lldp neighbors
 show lldp neighbors detail 
-show env all
-show log
+show switch detail
+show processes cpu sorted
+show processes cpu history
+show environment all
+show logging
