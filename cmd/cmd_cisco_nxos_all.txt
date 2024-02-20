@@ -1,4 +1,4 @@
-show run view full
+show run
 show version
 show inventory
 show interface description
