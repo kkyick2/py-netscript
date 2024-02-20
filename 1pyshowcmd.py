@@ -186,6 +186,11 @@ def connect_device(device, outpath):
             # open output file
             with open(outpath, 'w', encoding='utf-8') as outf:
                 # send each cmd to device
+                print_file('###### WILL EXECUTE:', outf)
+                for cmd in cmdlist:
+                    if cmd:
+                        print_file(cmd, outf)
+                # send each cmd to device
                 for cmd in cmdlist:
                     if cmd:
                         output = connect.send_command(cmd)
