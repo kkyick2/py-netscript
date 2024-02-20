@@ -11,7 +11,7 @@ from netmiko import SSHDetect, ConnectHandler
 from netmiko import NetmikoAuthenticationException
 from paramiko.ssh_exception import SSHException
 import logging
-version = '20240207'
+version = '20240220'
 #################################################
 # global var
 #################################################
@@ -281,7 +281,7 @@ if __name__ == "__main__":
     # example2: python 1pyshowcmd.py device_empf_iosnxos_hw_n.csv -o C:\Users\jackyyick\projects_local\python\<xxx>
     #   output folder : C:\Users\jackyyick\projects_local\python\<xxx>
     parser = argparse.ArgumentParser()
-    parser.add_argument("devicefile", help="device_list.csv")
+    parser.add_argument("devicefile", help="device_list in csv formet")
     parser.add_argument("-o", "--outpath", help="output path of the show cmd result",
                         default=os.path.join(os.path.dirname(os.path.abspath(__file__)), O_CMD_DIR))
     args = parser.parse_args()

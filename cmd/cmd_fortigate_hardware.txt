@@ -1,0 +1,6 @@
+get system status
+get system interface
+get system ha status
+get router info routing-table details
+diagnose hardware deviceinfo psu
+diagnose hardware deviceinfo disk

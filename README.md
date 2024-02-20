@@ -42,6 +42,24 @@ py-netscript
 |--- device_xxx.csv # modify this csv as inventory
 ```
 
+## pip requirement
+
+Export pip requirement
+
+```sh
+pip freeze > requirements.txt
+```
+
+Install pip requirement in new env
+
+```sh
+pip install -r requirements.txt
+```
+
+## Bcompare Setting
+
+https://www.scootersoftware.com/v4help/sample_scripts.html
+
 ## Reference
 
 netmiko https://github.com/ktbyers/netmiko
