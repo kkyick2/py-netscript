@@ -245,7 +245,7 @@ def connect_device(device, outpath):
     return
 
 
-def process_input(devicefile, outpath):
+def process_input(devicefile, timestamp, outpath):
     """
         1/ open device csv -> device list
         2/ open cmdoutput text -> connect device
@@ -259,7 +259,6 @@ def process_input(devicefile, outpath):
     mkdir(OUT_ROOT_PATH)
 
     # loop each row of csv
-    DATETIME = datetime.now().strftime("%Y%m%d_%H%M")
     for device in devicelist:
         # output filename
         O_FILENAME = device['hostname'] + '_' + \
@@ -267,7 +266,7 @@ def process_input(devicefile, outpath):
             '_' + device['otag2'] + '.txt'
 
         # create layer1: datetime batch folder
-        O_BATCH_PATH = os.path.join(OUT_ROOT_PATH, DATETIME)
+        O_BATCH_PATH = os.path.join(OUT_ROOT_PATH, timestamp)
         mkdir(O_BATCH_PATH)
 
         # if outdir1 is empty, then no need create layer2 folder
@@ -283,6 +282,48 @@ def process_input(devicefile, outpath):
         connect_device(device, O_FILE_PATH)
 
     return
+
+
+def main(devicefile, outpath):
+    
+    # prepare output batch timestamp
+    DATETIME = datetime.now().strftime("%Y%m%d_%H%M")
+
+    print(f'###')
+    print(f'###')
+    logger.info(f'###')
+    logger.info(f'###')
+    print(f'############################################################## ')
+    print(f'##################       START SCRIPT       ################## ')
+    print(f'### Input device inventory: {devicefile}')
+    print(f'### Output path: {outpath}')
+    logger.info(
+        f'############################################################## ')
+    logger.info(
+        f'##################       START SCRIPT       ################## ')
+    logger.info(f'### Input device inventory: {devicefile}')
+    logger.info(f'### Output path: {outpath}')
+
+    process_input(devicefile, DATETIME, outpath)
+
+    print(f'### Summary {devicefile}, Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT}')
+    print(f'            {devicefile},     Fail/Total: {FAIL_COUNT} / {INVENTORY_COUNT}')
+    print(f'            {devicefile},     Fail List : {FAIL_LIST}')
+
+    logger.info(f'### Summary {devicefile}, Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT}')
+    logger.info(f'            {devicefile},     Fail/Total: {FAIL_COUNT} / {INVENTORY_COUNT}')
+    logger.info(f'            {devicefile},     Fail List : {FAIL_LIST}')
+    
+
+    with open(os.path.join(outpath,DATETIME,'result_log.txt'), 'a', encoding='utf-8') as outf:
+        print_file(f'### Summary {devicefile}, Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT}', outf)
+        print_file(f'            {devicefile},     Fail/Total: {FAIL_COUNT} / {INVENTORY_COUNT}', outf)
+        print_file(f'            {devicefile},     Fail List : {FAIL_LIST}', outf)
+
+    print(f'###############       END SCRIPT       ############### ')
+    print(f'###################################################### ')
+    logger.info(f'###############       END SCRIPT       ############### ')
+    logger.info(f'###################################################### ')
 
 
 if __name__ == "__main__":
@@ -302,33 +343,4 @@ if __name__ == "__main__":
     devicefile = args.devicefile
     outpath = os.path.join(args.outpath)
 
-    print(f'###')
-    print(f'###')
-    logger.info(f'###')
-    logger.info(f'###')
-    print(f'############################################################## ')
-    print(f'##################       START SCRIPT       ################## ')
-    print(f'### Input device inventory: {devicefile}')
-    print(f'### Output path: {outpath}')
-    logger.info(
-        f'############################################################## ')
-    logger.info(
-        f'##################       START SCRIPT       ################## ')
-    logger.info(f'### Input device inventory: {devicefile}')
-    logger.info(f'### Output path: {outpath}')
-
-    process_input(devicefile, outpath)
-
-    print(
-        f'### Summary: Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT} in file {devicefile}')
-    logger.info(
-        f'### Summary: Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT} in file {devicefile}')
-    print(
-        f'###          {FAIL_COUNT} FAIL: {FAIL_LIST}')
-    logger.info(
-        f'###          {FAIL_COUNT} FAIL: {FAIL_LIST}')
-    
-    print(f'###############       END SCRIPT       ############### ')
-    print(f'###################################################### ')
-    logger.info(f'###############       END SCRIPT       ############### ')
-    logger.info(f'###################################################### ')
+    main(devicefile, outpath)
