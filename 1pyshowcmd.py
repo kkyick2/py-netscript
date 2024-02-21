@@ -285,7 +285,7 @@ def process_input(devicefile, timestamp, outpath):
 
 
 def main(devicefile, outpath):
-    
+
     # prepare output batch timestamp
     DATETIME = datetime.now().strftime("%Y%m%d_%H%M")
 
@@ -313,7 +313,6 @@ def main(devicefile, outpath):
     logger.info(f'### Summary {devicefile}, Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT}')
     logger.info(f'            {devicefile},     Fail/Total: {FAIL_COUNT} / {INVENTORY_COUNT}')
     logger.info(f'            {devicefile},     Fail List : {FAIL_LIST}')
-    
 
     with open(os.path.join(outpath,DATETIME,'result_log.txt'), 'a', encoding='utf-8') as outf:
         print_file(f'### Summary {devicefile}, Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT}', outf)
