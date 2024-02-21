@@ -18,8 +18,24 @@ method1: Usage: python 1pyshowcmd.py <device_list.csv>
 
 ```sh
 cd C:\Users\jackyyick\projects_local\python\py-netscript>
+# cretae venv
+virtualenv venv
+# enable venv
 venv\Scripts\activate
+# run python
 python 1pyshowcmd.py device_empf_iosnxos_hw_n.csv -o C:\Users\jackyyick\projects_local\python
+```
+
+Export pip requirement
+
+```sh
+pip freeze > requirements.txt
+```
+
+Install pip requirement in new env
+
+```sh
+pip install -r requirements.txt
 ```
 
 method2: window start.bat for multi start of 1pyshowcmd.py
@@ -40,20 +56,6 @@ py-netscript
 |--- output
 |--- 1pyshowcmd.py  # python script
 |--- device_xxx.csv # modify this csv as inventory
-```
-
-## pip requirement
-
-Export pip requirement
-
-```sh
-pip freeze > requirements.txt
-```
-
-Install pip requirement in new env
-
-```sh
-pip install -r requirements.txt
 ```
 
 ## Bcompare Setting
