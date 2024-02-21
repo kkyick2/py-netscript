@@ -1,0 +1,17 @@
+#########################################
+# start bcompare setting
+#########################################
+# %1 --> before
+# %2 --> after
+# %3 --> title
+# %4 --> output html
+#########################################
+load "%1" "%2"
+expand all
+select all
+compare rules-based
+file-report layout:side-by-side &
+    options:display-mismatches,ignore-unimportant,display-context,line-numbers &
+    title:"%3" &
+    output-to:"%4" &
+    output-options:html-color,wrap-character,wrap-word
