@@ -54,11 +54,18 @@ PRJ_ROOT_PATH = os.path.dirname(os.path.abspath(__file__))
 
 INVENTORY_COUNT = 0
 COMPLETE_COUNT = 0
+FAIL_COUNT = 0
+FAIL_LIST = []
 
 
 def add_complete_count():
     global COMPLETE_COUNT
     COMPLETE_COUNT = COMPLETE_COUNT + 1
+
+def add_fail_count(host):
+    global FAIL_COUNT
+    FAIL_COUNT = FAIL_COUNT + 1
+    FAIL_LIST.append(host)
 
 
 def set_total_count(count):
@@ -202,10 +209,12 @@ def connect_device(device, outpath):
         add_complete_count()
 
     except (EOFError, SSHException, NetmikoAuthenticationException) as e:
+        add_fail_count(device["ip"] + ':' + device["cmdfile"])
         print(f' Exception: {e}')
         logger.warning(e)
         pass
     except Exception as e:
+        add_fail_count(device["ip"] + ':' + device["cmdfile"])
         print(f' Exception: {e}')
         logger.warning(e)
         pass
@@ -314,7 +323,11 @@ if __name__ == "__main__":
         f'### Summary: Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT} in file {devicefile}')
     logger.info(
         f'### Summary: Complete/Total: {COMPLETE_COUNT} / {INVENTORY_COUNT} in file {devicefile}')
-
+    print(
+        f'###          {FAIL_COUNT} FAIL: {FAIL_LIST}')
+    logger.info(
+        f'###          {FAIL_COUNT} FAIL: {FAIL_LIST}')
+    
     print(f'###############       END SCRIPT       ############### ')
     print(f'###################################################### ')
     logger.info(f'###############       END SCRIPT       ############### ')

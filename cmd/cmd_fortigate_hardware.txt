@@ -1,6 +1,14 @@
 get system status
 get system interface
-get system ha status
+diagnose sys ha status
 get router info routing-table details
+diagnose  firewall  proute list | grep hit_count -v
+diagnose vpn ike gateway list | grep interface -c
+diagnose vpn ike gateway list | grep 'status: established' -c
+diagnose vpn ike gateway list | grep 'interface\|status: established'
+diagnose vpn tunnel list | grep sa= -c
+diagnose vpn tunnel list | grep sa=1 -c
+diagnose vpn tunnel list | grep sa=1
+diagnose vpn tunnel list | grep sa=0
 diagnose hardware deviceinfo psu
 diagnose hardware deviceinfo disk
