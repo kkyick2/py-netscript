@@ -2,6 +2,7 @@
 *xx*
 output
 outputcmd
+outputparse
 device_empf_*.csv
 device_*.csv
 

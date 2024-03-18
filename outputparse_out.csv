@@ -1,0 +1,69 @@
+hostname,interface,shutdown,description,nosw_noip,port_mode,trunk vlan,access vlan,channel-group,spanning-tree,ipaddr,vrf,helper-address,access-group,standby,ippim,ipigmp,ippolicy,servicepolicy,no ip xxx,other
+n1pnecdmz1201,Port-channel57,-,n1pnecdmz1101 - Po57,-,trunk,"['601-620,703,709,751-757,781,800,810,2001']",-,-,-,-,-,-,-,-,-,-,-,-,-,"['switchport nonegotiate', 'load-interval 30']"
+n1pnecdmz1201,GigabitEthernet0/0,-,n1pnecoob1201 - Gi1/3,-,-,-,-,-,['portfast'],172.31.210.16 255.255.254.0,Mgmt-vrf,-,-,-,-,-,-,-,-,"['load-interval 30', 'negotiation auto']"
+n1pnecdmz1201,GigabitEthernet1/0/1,-,n1pnelsgw1401 - P1,-,access,-,781,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,GigabitEthernet1/0/2,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/3,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/4,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/5,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/6,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/7,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/8,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/9,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/10,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/11,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/12,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/13,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/14,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/15,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/16,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/17,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/18,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/19,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/20,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/21,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/22,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/23,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/24,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/25,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/26,-,n1psefana1201 - P2,-,access,-,756,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,GigabitEthernet1/0/27,-,n1psefsan1101 - P4,-,access,-,755,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,GigabitEthernet1/0/28,-,n1psefsan1201 - P3,-,access,-,757,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,GigabitEthernet1/0/29,-,n1psefvpn1101 - P2,-,access,-,753,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,GigabitEthernet1/0/30,-,n1psefvpn1201 - P2,-,access,-,753,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,GigabitEthernet1/0/31,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/32,-,n1psefpro1201 - P3,-,access,-,752,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,GigabitEthernet1/0/33,-,n1psefmai1101 - P2,-,access,-,751,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,GigabitEthernet1/0/34,-,n1psefmai1201 - P2,-,access,-,751,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,GigabitEthernet1/0/35,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/36,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/37,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/38,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/39,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/40,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/41,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/42,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/43,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/44,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/45,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/46,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/0/47,shutdown,IBS_Temp_testing,-,access,-,753,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'no cdp enable']"
+n1pnecdmz1201,GigabitEthernet1/0/48,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/1/1,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/1/2,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/1/3,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,GigabitEthernet1/1/4,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,TenGigabitEthernet1/1/1,-,n1psefutm1401 - P17,-,trunk,"['601-620,703,709,750-757,781,800']",-,-,-,-,-,-,-,-,-,-,-,"['input AutoQos-4.0-Trust-Dscp-Input-Policy', 'output AutoQos-4.0-Output-Policy']",-,"['switchport nonegotiate', 'load-interval 30', 'auto qos trust dscp']"
+n1pnecdmz1201,TenGigabitEthernet1/1/2,-,n1psefext1201 - P36,-,trunk,"['601-620,709,810']",-,-,-,-,-,-,-,-,-,-,-,"['input AutoQos-4.0-Trust-Dscp-Input-Policy', 'output AutoQos-4.0-Output-Policy']",-,"['switchport nonegotiate', 'load-interval 30', 'auto qos trust dscp']"
+n1pnecdmz1201,TenGigabitEthernet1/1/3,-,n1pnelsgw1401 - P4,-,trunk,['703'],-,-,-,-,-,-,-,-,-,-,-,"['input AutoQos-4.0-Trust-Dscp-Input-Policy', 'output AutoQos-4.0-Output-Policy']",-,"['switchport nonegotiate', 'load-interval 30', 'auto qos trust dscp']"
+n1pnecdmz1201,TenGigabitEthernet1/1/4,-,n1psefweb1101 - P2,-,trunk,"['754,810']",-,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,TenGigabitEthernet1/1/5,-,n1psefweb1201 - P2,-,trunk,"['754,810']",-,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,TenGigabitEthernet1/1/6,-,n1pne5dns1201 - P1.1,-,trunk,"['800,2001']",-,-,['portfast'],-,-,-,-,-,-,-,-,-,-,"['load-interval 30', 'storm-control broadcast level 1.00', 'storm-control action trap']"
+n1pnecdmz1201,TenGigabitEthernet1/1/7,-,n1pnecdmz1101 - Te1/1/7,-,trunk,"['601-620,703,709,751-757,781,800,810,2001']",-,channel-group 57 mode active,-,-,-,-,-,-,-,-,-,"['input AutoQos-4.0-Trust-Dscp-Input-Policy', 'output AutoQos-4.0-Output-Policy']",-,"['switchport nonegotiate', 'load-interval 30', 'auto qos trust dscp']"
+n1pnecdmz1201,TenGigabitEthernet1/1/8,-,n1pnecdmz1101 - Te1/1/8,-,trunk,"['601-620,703,709,751-757,781,800,810,2001']",-,channel-group 57 mode active,-,-,-,-,-,-,-,-,-,"['input AutoQos-4.0-Trust-Dscp-Input-Policy', 'output AutoQos-4.0-Output-Policy']",-,"['switchport nonegotiate', 'load-interval 30', 'auto qos trust dscp']"
+n1pnecdmz1201,FortyGigabitEthernet1/1/1,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,FortyGigabitEthernet1/1/2,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,TwentyFiveGigE1/1/1,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,TwentyFiveGigE1/1/2,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,AppGigabitEthernet1/0/1,shutdown,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+n1pnecdmz1201,Vlan1,shutdown,-,['no ip address'],-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-

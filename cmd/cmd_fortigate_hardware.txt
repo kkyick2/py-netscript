@@ -1,6 +1,6 @@
-get system status
+get system status | grep -v 'Cluster uptime:\|System time:'
 get system interface
-diagnose sys ha status
+diagnose sys ha status | grep -v 'traffic.local\|traffic.total'
 get router info routing-table details
 diagnose  firewall  proute list | grep hit_count -v
 diagnose vpn ike gateway list | grep interface -c

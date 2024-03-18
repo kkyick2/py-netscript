@@ -62,6 +62,48 @@ py-netscript
 
 https://www.scootersoftware.com/v4help/sample_scripts.html
 
+https://www.scootersoftware.com/v4help/sessiontextimportance.html
+
+The text items in the Unimportant text
+
+| description    | regex                               |
+| :------------- | :---------------------------------- |
+| fortigate conf | ^#conf_file_ver=.\*                 |
+| fortigate conf | ^#private-encryption-key=.\*        |
+| fortigate conf | ._set password\sENC._               |
+| fortigate conf | ^\s+set\ssecondary-secret\sENC\s.\* |
+
+## Regex
+
+### Regex for matching config file
+
+https://regex101.com/r/i1BYBO/1
+
+(#####[\s\S]_?)\n([\s\S]_?)(?=\s*#####[\s\S]*?|$)
+
+```sh
+Total cdp entries displayed : 3
+###### EXECUTE CMD: show lldp neighbors
+% LLDP is not enabled
+###### EXECUTE CMD: show environment power
+SW  PID                 Serial#     Status           Sys Pwr  PoE Pwr  Watts
+--  ------------------  ----------  ---------------  -------  -------  -----
+1A  PWR-C1-350WAC-P     DCC2522B1V0  OK              Good     n/a      350
+1B  PWR-C1-350WAC-P     DCC2522B1UZ  OK              Good     n/a      350
+
+###### EXECUTE CMD: show environment fan
+Switch   FAN     Speed   State   Airflow direction
+---------------------------------------------------
+  1       1     14240     OK     Front to Back
+  1       2     14240     OK     Front to Back
+  1       3     14240     OK     Front to Back
+FAN PS-1 is OK
+FAN PS-2 is OK
+
+###### EXECUTE CMD: show clock
+04:01:07.912 HKT Tue Feb 13 2024
+```
+
 ## Reference
 
 netmiko https://github.com/ktbyers/netmiko

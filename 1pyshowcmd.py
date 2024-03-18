@@ -329,6 +329,8 @@ if __name__ == "__main__":
 
     O_CMD_DIR = 'outputcmd'
 
+    # usage: python 1pyshowcmd.py <device_file> -o <output path>
+
     # example1: python 1pyshowcmd.py device_lhk2.csv
     #   output folder default: C:\Users\jackyyick\projects_local\python\py-netscript\outputcmd>
 
