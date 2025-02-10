@@ -130,6 +130,7 @@ def parseCiscoIOS_Interface(parse, hostname):
             # vrf
             elif line.startswith('vrf forwarding') | line.startswith('ip vrf forwarding') | line.startswith('vrf member') :
                 line2 = re.split('vrf forwarding ', line)
+                line2 = re.split('vrf member ', line)
                 row['vrf'] = line2[1]
 
             # ip helper-address
@@ -238,12 +239,17 @@ def parse_configfile_to_dict(inf):
     parse = CiscoConfParse(inf)
     #################################################
     # Hostname line
-    line = parse.find_objects(r'^hostname\b|^\s+sysname')[0].text
+    line = parse.find_objects(r'^hostname\b|^\s+sysname|^switchname\b')[0].text
     type = 'tbc'
 
     # Cisco: hostname<space>SW1
     if line.startswith('hostname'):
         hostname = re.findall(r'^hostname\s+(\S+)', line)[0]
+        type = 'ios'
+
+    # Cisco: switchname<space>SW1
+    if line.startswith('switchname'):
+        hostname = re.findall(r'^switchname\s+(\S+)', line)[0]
         type = 'ios'
 
     # H3C: <space>sysname<space>SW1

@@ -223,7 +223,7 @@ def connect_device(device, outpath):
     # below part for tshoot login issue
     ###########################################################################################
     connect = ConnectHandler(**device2)
-    print("login jor!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1!!!!!!!!!!!!!!!!!!!!")
+    print("login jor!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
     prompt = connect.find_prompt()
     print(f' Device Type: {devicetype} | Prompt: {prompt}')

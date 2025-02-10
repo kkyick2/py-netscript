@@ -1,9 +1,9 @@
 import paramiko
 
 # SSH connection parameters
-hostname = "172.31.211.5"
-username = "fwreadonly"
-password = "P@sshktw0rd202206"
+hostname = "172.31.210.71"
+username = "swreadonly"
+password = "d8Nz7KW756sbmEXv!"
 
 # Create SSH client
 client = paramiko.SSHClient()
@@ -20,7 +20,7 @@ session.invoke_subsystem('ssh')
 transport.auth_interactive(username)
 
 # Execute command
-command = "get system status"
+command = "sh run"
 stdin, stdout, stderr = client.exec_command(command)
 
 # Print command output
